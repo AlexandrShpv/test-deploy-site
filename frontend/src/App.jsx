@@ -6,7 +6,9 @@ function App() {
   const [items, setItems] = useState(null)
 
   const fetchItems = () => {
-    axios.get('https://api.site-test-deploy1.ru/items').then(r => {
+    // axios.get('/api/items').then(r => { // если на одном http://185.105.91.58 то можно не указывать домен
+    axios.get('http://185.105.91.58/api/items').then(r => {
+    // axios.get('https://api.site-test-deploy1.ru/items').then(r => {
       setItems(r.data)
     })
   }
